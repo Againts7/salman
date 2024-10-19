@@ -31,6 +31,16 @@
       .wrapper {
         margin: 50px 0;
       }
+      button {
+        background-color: #ff69b4;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        color: white;
+        cursor: pointer;
+        margin: 10px;
+        transition: background-color 0.3s ease;
+      }
       @keyframes fadeIn {
         from {
           opacity: 0.3;
@@ -51,6 +61,12 @@
   </head>
   <body>
     <h1>Untuk Siti Yasinta Tersayang</h1>
+
+    <audio src="./audio.mp3" id="audio" autoplay loop></audio>
+    <button onclick="document.getElementById('audio').play()">
+      Play Audio
+    </button>
+
     <div class="wrapper">
       <p>Hai Sayangku,</p>
       <p>
