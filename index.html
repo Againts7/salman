@@ -144,8 +144,18 @@
     </div>
 
     <audio src="./audio.mp3" autoplay loop></audio>
+
     <script>
-      document.querySelector("audio").play();
+      // Pastikan elemen audio siap diputar
+      const audio = document.querySelector("audio");
+
+      // Cek apakah browser mendukung autoplay
+      audio.addEventListener("canplaythrough", () => {
+        // Beberapa browser mungkin memerlukan interaksi pengguna sebelum memutar audio
+        audio.play().catch((error) => {
+          console.log("Autoplay tidak didukung atau diblokir oleh browser.");
+        });
+      });
     </script>
   </body>
 </html>
